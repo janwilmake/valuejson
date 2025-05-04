@@ -35,3 +35,12 @@ type Value = {
 ```
 
 If every system would attribute its sources - or if we estimate this based on other information - we could calculate the optimal generated value distribution by finding these attributions/estimations all the way down the value chain.
+
+To participate with the `value.json` convention, manually or automatically create a JSON file called `value.json` at the root of your repo/website and fill it according to the spec.
+
+```json
+{
+  "$schema": "https://valuejson.com/value.schema.json",
+  "sources": []
+}
+```
