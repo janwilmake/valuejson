@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Value",
+  "type": "object",
+  "required": ["allocation"],
+  "properties": {
+    "system": {
+      "type": "string",
+      "description": "Which system was used to generate this value.json"
+    },
+
+    "version": {
+      "type": "string",
+      "description": "Version of the system, if present."
+    },
+
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "url": { "type": "string" },
+          "line": { "type": "number" },
+          "count": { "type": "number" }
+        }
+      }
+    },
+
+    "allocation": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["url", "value", "description"],
+        "properties": {
+          "url": {
+            "type": "string",
+            "format": "uri",
+            "description": "a URL linking to the origin of the value. should be as specific as possible\n\nExamples of sources include:\n\n- https://github.com/janwilmake (myself)\n- https://openapis.org (an orginisation)\n- https://claude.ai (a tool)"
+          },
+          "value": {
+            "type": "number",
+            "description": "the value would be a numeric relative representation of attributed value"
+          },
+          "description": {
+            "type": "string",
+            "description": "The description is additional information of why the 'value' is attributed to the 'source'. This is useful for fairer down-stream value allocation."
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "$schema": "./value.schema.json",
+  "system": "Manual",
+  "sources": [
+    {
+      "url": "https://passionfruit.earth",
+      "description": "For teaching me about value chains",
+      "value": 1
+    },
+    {
+      "url": "https://x.com/DefenderOfBasic",
+      "description": "Memetics; study of where ideas come from",
+      "value": 1
+    },
+    {
+      "url": "https://x.com/leo_guinan",
+      "description": "Marketplaces of ideas",
+      "value": 1
+    },
+    {
+      "url": "https://github.com/carolkindell",
+      "description": "Teaching me about kindness",
+      "value": 1
+    },
+    {
+      "url": "https://github.com/janwilmake",
+      "description": "The idea of structuring unstructured data in repos on global scale",
+      "value": 1
+    }
+  ]
+}
