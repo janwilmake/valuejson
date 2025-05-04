@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>value.json - Idea Value Chain</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+
+<body class="bg-gray-50 text-gray-900">
+    <!-- Hero Section -->
+    <div class="bg-gradient-to-r from-blue-600 to-blue-700 text-white">
+        <div class="container mx-auto px-4 py-16">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-5xl font-bold mb-4">value.json</h1>
+                <p class="text-2xl mb-8">Track and attribute value across the software development chain</p>
+                <div class="flex gap-4 justify-center">
+                    <a href="https://github.com/janwilmake/valuejson"
+                        class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+                        View on GitHub
+                    </a>
+                    <a href="/value.schema.json"
+                        class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+                        Get Schema
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Introduction Section -->
+    <div class="container mx-auto px-4 py-16">
+        <div class="max-w-3xl mx-auto">
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-12">
+                <h2 class="text-3xl font-bold mb-4">What is value.json?</h2>
+                <p class="text-lg mb-4">
+                    A value chain refers to the full lifecycle of a product or process, including material sourcing,
+                    production, consumption and disposal/recycling processes.
+                </p>
+                <p class="text-lg">
+                    value.json is a standard for tracking and attributing value across software projects, making the
+                    often invisible contributions and inspirations in our development ecosystem visible and
+                    quantifiable.
+                </p>
+            </div>
+
+            <!-- Key Questions Section -->
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-12">
+                <h2 class="text-3xl font-bold mb-6">Key Questions for Every Implementation</h2>
+                <ul class="space-y-4 text-lg">
+                    <li class="flex items-start">
+                        <span class="text-blue-600 mr-3">•</span>
+                        <span>What is the added value compared to pre-existing systems?</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-blue-600 mr-3">•</span>
+                        <span>What inspirations led to the creation of this new system?</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-blue-600 mr-3">•</span>
+                        <span>Who/what does the author attribute the most value to?</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-blue-600 mr-3">•</span>
+                        <span>Which inspirations are obvious and therefore not attributed explicitly?</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Schema Section -->
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-12">
+                <h2 class="text-3xl font-bold mb-6">The Schema</h2>
+                <pre class="bg-gray-900 text-gray-100 p-6 rounded-lg overflow-x-auto mb-6"><code class="language-typescript">type Value = {
+  allocation: {
+    /**
+     * A URL linking to the origin of the value. Should be as specific as possible.
+     *
+     * Examples:
+     * - https://github.com/janwilmake (myself)
+     * - https://openapis.org (an organization)
+     * - https://claude.ai (a tool)
+     */
+    url: string;
+    
+    /**
+     * Numeric relative representation of attributed value
+     */
+    value: number;
+    
+    /**
+     * Why this value is attributed to this source
+     */
+    description: string;
+  }[];
+};</code></pre>
+
+                <p class="text-lg">
+                    If every system attributes its sources, we can calculate optimal value distribution by tracing
+                    attributions throughout the value chain.
+                </p>
+            </div>
+
+            <!-- Implementation Section -->
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-12">
+                <h2 class="text-3xl font-bold mb-6">How to Implement</h2>
+                <p class="text-lg mb-4">
+                    To participate with the value.json convention, create a JSON file called <code
+                        class="bg-gray-100 px-2 py-1 rounded">value.json</code> at the root of your repository or
+                    website:
+                </p>
+                <pre class="bg-gray-900 text-gray-100 p-6 rounded-lg overflow-x-auto"><code class="language-json">{
+  "$schema": "https://valuejson.com/value.schema.json",
+  "sources": []
+}</code></pre>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="bg-blue-600 text-white rounded-lg shadow-lg p-8 text-center">
+                <h2 class="text-3xl font-bold mb-4">Start Attributing Value Today</h2>
+                <p class="text-xl mb-6">
+                    Join the movement to make software value chains transparent and fair.
+                </p>
+                <div class="flex gap-4 justify-center">
+                    <a href="https://github.com/janwilmake/valuejson"
+                        class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+                        Explore on GitHub
+                    </a>
+                    <a href="/value.schema.json"
+                        class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+                        Download Schema
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-2">value.json - Making software value chains transparent</p>
+            <p class="text-sm">
+                Created by <a href="https://github.com/janwilmake"
+                    class="text-blue-400 hover:text-blue-300">janwilmake</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-typescript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js"></script>
+</body>
+
+</html>

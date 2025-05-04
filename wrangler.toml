@@ -1,0 +1,9 @@
+name = "valuejson"
+compatibility_date = "2025-04-21"
+dev.port = 3000
+assets.directory = "./"
+
+routes = [
+  { pattern = "valuejson.com", custom_domain = true },
+  { pattern = "www.valuejson.com", custom_domain = true }
+]
