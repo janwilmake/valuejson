@@ -44,3 +44,9 @@ To participate with the `value.json` convention, manually or automatically creat
   "sources": []
 }
 ```
+
+# TODO
+
+- Turn this into a LLM filter+analysis that is done for any repo in a very cheap way.
+- Make this accessible at https://github.valuejson.com/owner/repo
+- Turn this into a plugin for uithub.
